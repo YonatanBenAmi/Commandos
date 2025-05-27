@@ -3,7 +3,7 @@ namespace Commandos.Models
     public class Commado
     {
         //Fields.
-        public string Name;
+        private string Name;
         public int CodeName;
         public string[] Tools;
         public string Status;
@@ -22,6 +22,12 @@ namespace Commandos.Models
         {
             Status = "walk";
             Console.WriteLine("The soldier is walking.");
+        }
+
+        //Get name.
+        private string SayName()
+        {
+            return Name;
         }
 
         //Change status and print that soldier hiding.
