@@ -4,7 +4,7 @@ namespace Commandos.Models
     {
         //Fields.
         private string Name;
-        public int CodeName;
+        private int CodeName;
         public string[] Tools;
         public string Status;
 
@@ -28,6 +28,12 @@ namespace Commandos.Models
         private string SayName()
         {
             return Name;
+        }
+
+        //Get code name.
+        private int SayCodeName()
+        {
+            return CodeName;
         }
 
         //Change status and print that soldier hiding.
