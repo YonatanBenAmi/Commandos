@@ -5,7 +5,15 @@ namespace Commandos.Models
     public class Weapon
     {
         public string Name;
-        public string producer;
-        public int NumberBullets;
+        public string Producer;
+        public int NumBullets;
+
+        //Constractor for Weapon-class.
+        public Weapon(string name, string producer, int numBillets)
+        {
+            Name = name;
+            Producer = producer;
+            NumBullets = numBillets;
+        }
     }
 }
