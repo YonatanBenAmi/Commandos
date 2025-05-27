@@ -5,9 +5,9 @@ namespace Commandos
     {
         static void Main(string[] args)
         {
-            Commado[] soldiersArr =
+            Commando[] soldiersArr =
             {
-                new Commado("Yonatan", 1111),
+                new Commando("Yonatan", 1111),
                 new SeaCommando("Moshe", 2222),
                 new AirCommando("Shay", 3333),
             };

@@ -2,29 +2,55 @@ namespace Commandos.Models
 {
     public class CommandoFactory
     {
+        List<Commando> commandoList = new List<Commando>();//list for Commando soldiers.
+        string[] typeCommando = ["AirCommando", "SeaCommando", "Commando"];
+        Random random = new Random();
+        int CountCommandoCreate;
         int nameCode = 1;
         int numName = 1;
+        
 
-        List<Commado> commandoList = new List<Commado>();//list for Commando soldiers.
+        //Constractor for CommandoFactory-class.
+        public CommandoFactory(int countCommandoCreate)
+        {
+            CountCommandoCreate = countCommandoCreate;
+        }
 
         //Create Commando instance and push to list. 
-        public void CreateCommandoInstance(string type, string name)
+        public void CreateCommandoInstance()
         {
-            Commado commado;
+            string type = typeCommando[random.Next(0, 3)];
+            Commando commando;
             switch (type)
             {
                 case "AirCommando":
-                    commado = new AirCommando($"soldier{numName}", nameCode);
-                    commandoList.Add(commado);
+                    commando = new AirCommando($"soldier{numName}", nameCode);
+                    numName++;
+                    nameCode++;
+                    commandoList.Add(commando);
                     break;
                 case "SeaCommando":
-                    commado = new SeaCommando($"soldier{numName}", nameCode);
-                    commandoList.Add(commado);
+                    commando = new SeaCommando($"soldier{numName}", nameCode);
+                    numName++;
+                    nameCode++;
+                    commandoList.Add(commando);
                     break;
                 default:
-                    commado = new AirCommando($"soldier{numName}", nameCode);
-                    commandoList.Add(commado);
+                    commando = new Commando($"soldier{numName}", nameCode);
+                    numName++;
+                    nameCode++;
+                    commandoList.Add(commando);
                     break;
+            }
+        }
+
+        //create all instanse that geting from argument.
+        public void CreateCommandos()
+        {
+            
+            for (int i = 0; i < CountCommandoCreate; i++)
+            {
+                CreateCommandoInstance();
             }
         }
     }

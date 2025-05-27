@@ -1,6 +1,6 @@
 namespace Commandos.Models
 {
-    public class SeaCommando : Commado
+    public class SeaCommando : Commando
     {
         //Constractor for SeaCommando-class.
         public SeaCommando(string name, int codeName) : base(name, codeName) { }
