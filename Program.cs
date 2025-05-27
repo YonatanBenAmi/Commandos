@@ -5,7 +5,17 @@ namespace Commandos
     {
         static void Main(string[] args)
         {
-            //testing 
+            Commado[] soldiersArr =
+            {
+                new Commado("Yonatan", 1111),
+                new SeaCommando("Moshe", 2222),
+                new AirCommando("Shay", 3333),
+            };
+
+            foreach (var soldier in soldiersArr)
+            {
+                soldier.Attack();
+            }
         }
     }
 }

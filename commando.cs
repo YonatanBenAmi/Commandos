@@ -59,7 +59,7 @@ namespace Commandos.Models
         }
 
         //Change status and print codeName soldier that attacking.
-        public void Attack()
+        public virtual void Attack()
         {
             Status = "attacking";
             Console.WriteLine($"A commando with a codename {CodeName} is attacking");
