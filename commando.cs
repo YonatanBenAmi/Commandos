@@ -1,6 +1,6 @@
 namespace Commandos.Models
 {
-    public class Commado
+    public class Commando
     {
         //Fields.
         private string Name;
@@ -9,7 +9,7 @@ namespace Commandos.Models
         public string Status;
 
         //Constractor for Commando-class.
-        public Commado(string name, int codeName)
+        public Commando(string name, int codeName)
         {
             Name = name;
             CodeName = codeName;

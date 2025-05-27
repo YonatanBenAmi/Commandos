@@ -1,6 +1,6 @@
 namespace Commandos.Models
 {
-    public class AirCommando : Commado
+    public class AirCommando : Commando
     {
         //Constractor for AirCommando-class
         public AirCommando(string name, int codeName) : base(name, codeName) { }
