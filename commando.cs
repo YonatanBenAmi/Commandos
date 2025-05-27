@@ -31,9 +31,24 @@ namespace Commandos.Models
         }
 
         //Get code name.
-        private int SayCodeName()
+        public int SayCodeName()
         {
             return CodeName;
+        }
+
+        //Getting the name with access permission filtering.
+        public string AccessFilterName(string commanderRank)
+        {
+            string UpperCaceRank = commanderRank.ToUpper();
+            switch (UpperCaceRank)
+            {
+                case "GENERAL":
+                    return SayName();
+                case "COLONEL":
+                    return SayCodeName().ToString();
+                default:
+                    return "The information is classified.";
+            }
         }
 
         //Change status and print that soldier hiding.
