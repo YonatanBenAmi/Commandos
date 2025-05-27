@@ -5,10 +5,9 @@ namespace Commandos.Models
         int nameCode = 1;
         int numName = 1;
 
-        List<Commado> commandoList = new List<Commado>();
+        List<Commado> commandoList = new List<Commado>();//list for Commando soldiers.
 
-
-        //Create Enemy instance and push to list. 
+        //Create Commando instance and push to list. 
         public void CreateCommandoInstance(string type, string name)
         {
             Commado commado;
