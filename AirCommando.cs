@@ -8,5 +8,11 @@ namespace Commandos.Models
         {
             Console.WriteLine("The Air Commando has impressive parachuting capabilities.");
         }
+
+        public void Attack()
+        {
+            Status = "attacking";
+            Console.WriteLine($"Air commando soldier id: {SayCodeName()} attacks!");
+        }
     }
 }
