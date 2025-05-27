@@ -19,7 +19,13 @@ namespace Commandos.Models
         public void Walk()
         {
             Status = "walk";
-            Console.WriteLine("The soldier is walking");
+            Console.WriteLine("The soldier is walking.");
+        }
+
+        public void Hide()
+        {
+            Status = "hide";
+            Console.WriteLine("The soldier is hiding.");
         }
         
     }
