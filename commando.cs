@@ -5,15 +5,21 @@ namespace Commandos.Models
         public string Name;
         public int CodeName;
         public string[] Tools;
-        public string[] Status;
+        public string Status;
 
 
-        public Commado(string name, int codeName, string[] tools, string[] status)
+        public Commado(string name, int codeName, string[] tools)
         {
             Name = name;
             CodeName = codeName;
             Tools = tools;
-            Status = status;
+            Status = "unknown";
+        }
+
+        public void Walk()
+        {
+            Status = "walk";
+            Console.WriteLine("The soldier is walking");
         }
         
     }
