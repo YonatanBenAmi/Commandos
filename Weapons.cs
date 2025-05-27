@@ -15,5 +15,12 @@ namespace Commandos.Models
             Producer = producer;
             NumBullets = numBillets;
         }
+
+        //Shoots a gun bullet and subtracts from the total number of bullets.
+        public void Shoot()
+        {
+            NumBullets--;
+            System.Console.WriteLine("Shot");
+        }
     }
 }
