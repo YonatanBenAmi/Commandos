@@ -1,4 +1,5 @@
 using System.Reflection.Metadata.Ecma335;
+using Commandos.Models;
 
 namespace Commandos.Models
 {
@@ -19,8 +20,15 @@ namespace Commandos.Models
         //Shoots a gun bullet and subtracts from the total number of bullets.
         public void Shoot()
         {
-            NumBullets--;
-            System.Console.WriteLine("Shot");
+            if (NumBullets > 0)
+            {
+                NumBullets--;
+                Console.WriteLine("Shot");
+            }
+            else
+            {
+                Console.WriteLine("Click-click - There are no bullets in stock");
+            }    
         }
     }
 }

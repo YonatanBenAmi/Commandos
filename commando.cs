@@ -9,11 +9,11 @@ namespace Commandos.Models
         public string Status;
 
         //Constractor for Commando-class.
-        public Commado(string name, int codeName, string[] tools)
+        public Commado(string name, int codeName)
         {
             Name = name;
             CodeName = codeName;
-            Tools = tools;
+            Tools = ["hammer", "Chisel", "rope", "bag", "canteen"];
             Status = "unknown";
         }
 
@@ -31,9 +31,10 @@ namespace Commandos.Models
             Console.WriteLine("The soldier is hiding.");
         }
 
-        //Print codeName soldier that attacking.
+        //Change status and print codeName soldier that attacking.
         public void Attack()
         {
+            Status = "attacking";
             Console.WriteLine($"A commando with a codename {CodeName} is attacking");
         }
         
